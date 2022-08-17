@@ -1,5 +1,6 @@
 import React from "react";
 import TodoItem from "./ToDoItem";
+import { v4 as uuidv4 } from "uuid";
 
 export class TodoProps {
   id: string;
@@ -7,7 +8,7 @@ export class TodoProps {
 
   constructor(todoText: string) {
     this.text = todoText;
-    this.id = new Date().toISOString();
+    this.id = uuidv4();
   }
 }
 
